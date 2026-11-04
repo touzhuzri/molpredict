@@ -1,0 +1,199 @@
+{
+  "experiment": "B_OLD_ONLY",
+  "split_seed": 42,
+  "seed": 44,
+  "n_train": 1259,
+  "n_val": 312,
+  "n_test": 312,
+  "n_train_positive": 281,
+  "n_train_negative": 978,
+  "n_params_total": 715009,
+  "n_params_trainable": 715009,
+  "best_epoch": 9,
+  "epochs_run": 27,
+  "threshold": 0.2659,
+  "val": {
+    "n": 312,
+    "positives": 122,
+    "negatives": 190,
+    "threshold": 0.2659,
+    "f1": 0.7299270072992701,
+    "precision": 0.6578947368421053,
+    "recall": 0.819672131147541,
+    "mcc": 0.533037747510109,
+    "confusion_matrix": {
+      "tn": 138,
+      "fp": 52,
+      "fn": 22,
+      "tp": 100
+    },
+    "roc_auc": 0.8210094909404659,
+    "pr_auc": 0.7276099476972524
+  },
+  "train": {
+    "n": 1259,
+    "positives": 281,
+    "negatives": 978,
+    "threshold": 0.2659,
+    "f1": 0.6742532005689901,
+    "precision": 0.5616113744075829,
+    "recall": 0.8434163701067615,
+    "mcc": 0.577099317901469,
+    "confusion_matrix": {
+      "tn": 793,
+      "fp": 185,
+      "fn": 44,
+      "tp": 237
+    },
+    "roc_auc": 0.8959729712027598,
+    "pr_auc": 0.7290157636501507
+  },
+  "test": {
+    "n": 312,
+    "positives": 128,
+    "negatives": 184,
+    "threshold": 0.2659,
+    "f1": 0.6523297491039427,
+    "precision": 0.6026490066225165,
+    "recall": 0.7109375,
+    "mcc": 0.37879530620996743,
+    "confusion_matrix": {
+      "tn": 124,
+      "fp": 60,
+      "fn": 37,
+      "tp": 91
+    },
+    "roc_auc": 0.7527386209239131,
+    "pr_auc": 0.63298837866041,
+    "loss": 1.409122959161416
+  },
+  "test_subsets": {
+    "all_test": {
+      "n": 312,
+      "positives": 128,
+      "negatives": 184,
+      "threshold": 0.2659,
+      "f1": 0.6523297491039427,
+      "precision": 0.6026490066225165,
+      "recall": 0.7109375,
+      "mcc": 0.37879530620996743,
+      "confusion_matrix": {
+        "tn": 124,
+        "fp": 60,
+        "fn": 37,
+        "tp": 91
+      },
+      "roc_auc": 0.7527386209239131,
+      "pr_auc": 0.63298837866041,
+      "loss": 1.409122959161416
+    },
+    "old_positive_vs_negative": {
+      "n": 261,
+      "positives": 77,
+      "negatives": 184,
+      "threshold": 0.2659,
+      "f1": 0.5654450261780105,
+      "precision": 0.47368421052631576,
+      "recall": 0.7012987012987013,
+      "mcc": 0.345000405190995,
+      "confusion_matrix": {
+        "tn": 124,
+        "fp": 60,
+        "fn": 23,
+        "tp": 54
+      },
+      "roc_auc": 0.7547995482778092,
+      "pr_auc": 0.5082267934478628
+    },
+    "new_only_positive_vs_negative": {
+      "n": 235,
+      "positives": 51,
+      "negatives": 184,
+      "threshold": 0.2659,
+      "f1": 0.5,
+      "precision": 0.38144329896907214,
+      "recall": 0.7254901960784313,
+      "mcc": 0.33441070569742565,
+      "confusion_matrix": {
+        "tn": 124,
+        "fp": 60,
+        "fn": 14,
+        "tp": 37
+      },
+      "roc_auc": 0.7496270247229327,
+      "pr_auc": 0.4293011575337991
+    },
+    "multi_component_positive_vs_negative": {
+      "n": 214,
+      "positives": 30,
+      "negatives": 184,
+      "threshold": 0.2659,
+      "f1": 0.40707964601769914,
+      "precision": 0.27710843373493976,
+      "recall": 0.7666666666666667,
+      "mcc": 0.31392025445007843,
+      "confusion_matrix": {
+        "tn": 124,
+        "fp": 60,
+        "fn": 7,
+        "tp": 23
+      },
+      "roc_auc": 0.7938405797101449,
+      "pr_auc": 0.3635902607203889
+    },
+    "single_component_positive_vs_negative": {
+      "n": 282,
+      "positives": 98,
+      "negatives": 184,
+      "threshold": 0.2659,
+      "f1": 0.6017699115044248,
+      "precision": 0.53125,
+      "recall": 0.6938775510204082,
+      "mcc": 0.351768723621908,
+      "confusion_matrix": {
+        "tn": 124,
+        "fp": 60,
+        "fn": 30,
+        "tp": 68
+      },
+      "roc_auc": 0.7401563886424134,
+      "pr_auc": 0.5546572764961499
+    },
+    "old_structures_only": {
+      "n": 261,
+      "positives": 77,
+      "negatives": 184,
+      "threshold": 0.2659,
+      "f1": 0.5654450261780105,
+      "precision": 0.47368421052631576,
+      "recall": 0.7012987012987013,
+      "mcc": 0.345000405190995,
+      "confusion_matrix": {
+        "tn": 124,
+        "fp": 60,
+        "fn": 23,
+        "tp": 54
+      },
+      "roc_auc": 0.7547995482778092,
+      "pr_auc": 0.5082267934478628
+    }
+  },
+  "aux": {
+    "enabled": false,
+    "weight": 0.0,
+    "n_aux_structures": 0,
+    "final_loss": null
+  },
+  "train_test_auc_gap": 0.14323435027884668,
+  "elapsed_sec": 31.6,
+  "mean_epoch_sec": 1.14,
+  "peak_allocated_mb": 189.2,
+  "gpu": {
+    "available": true,
+    "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "total_memory_gb": 8.0,
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "bf16_supported": true
+  }
+}

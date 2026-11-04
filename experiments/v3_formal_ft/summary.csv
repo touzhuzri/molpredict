@@ -1,0 +1,2 @@
+﻿experiment,modalities,seed,val_roc_auc,val_pr_auc,test_roc_auc,test_pr_auc,test_f1,test_precision,test_recall,test_mcc,threshold,test_tn,test_fp,test_fn,test_tp,best_epoch,elapsed_sec
+full_ft,smiles+confseq+descriptors,42,0.8257575757575758,0.6470127870626776,0.819238683127572,0.5991882752078764,0.5531914893617021,0.48148148148148145,0.65,0.3838822035903468,0.4024,187,56,28,52,10,1472.2

@@ -1,0 +1,112 @@
+{
+  "threshold": 0.4615,
+  "metrics": {
+    "n": 312,
+    "positives": 128,
+    "negatives": 184,
+    "threshold": 0.4615,
+    "f1": 0.7300380228136882,
+    "precision": 0.7111111111111111,
+    "recall": 0.75,
+    "mcc": 0.5341678560644292,
+    "confusion_matrix": {
+      "tn": 145,
+      "fp": 39,
+      "fn": 32,
+      "tp": 96
+    },
+    "roc_auc": 0.8526452105978262,
+    "pr_auc": 0.7491534404841423,
+    "brier": 0.15825720609016936,
+    "log_loss": 0.7849857235428954,
+    "ece_10": 0.08908333313190704,
+    "reliability": [
+      {
+        "bin_low": 0.0,
+        "bin_high": 0.1,
+        "n": 111,
+        "mean_predicted": 0.028106908599707874,
+        "fraction_positive": 0.036036036036036036
+      },
+      {
+        "bin_low": 0.2,
+        "bin_high": 0.30000000000000004,
+        "n": 40,
+        "mean_predicted": 0.25459497977387874,
+        "fraction_positive": 0.425
+      },
+      {
+        "bin_low": 0.30000000000000004,
+        "bin_high": 0.4,
+        "n": 26,
+        "mean_predicted": 0.3526288951323692,
+        "fraction_positive": 0.4230769230769231
+      },
+      {
+        "bin_low": 0.4,
+        "bin_high": 0.5,
+        "n": 17,
+        "mean_predicted": 0.4615384615384615,
+        "fraction_positive": 0.5294117647058824
+      },
+      {
+        "bin_low": 0.5,
+        "bin_high": 0.6000000000000001,
+        "n": 19,
+        "mean_predicted": 0.5714285714285714,
+        "fraction_positive": 0.7894736842105263
+      },
+      {
+        "bin_low": 0.7000000000000001,
+        "bin_high": 0.8,
+        "n": 16,
+        "mean_predicted": 0.7406668682262141,
+        "fraction_positive": 0.5625
+      },
+      {
+        "bin_low": 0.8,
+        "bin_high": 0.9,
+        "n": 53,
+        "mean_predicted": 0.813559322033898,
+        "fraction_positive": 0.6792452830188679
+      },
+      {
+        "bin_low": 0.9,
+        "bin_high": 1.0,
+        "n": 30,
+        "mean_predicted": 1.0,
+        "fraction_positive": 0.9
+      }
+    ],
+    "bootstrap": {
+      "n_boot": 2000,
+      "roc_auc_95ci": [
+        0.8092827473829011,
+        0.8916524512121445
+      ],
+      "pr_auc_95ci": [
+        0.6684681381915836,
+        0.8220088007347889
+      ],
+      "f1_95ci": [
+        0.6638259708043125,
+        0.7878844204123013
+      ]
+    },
+    "topk": {
+      "top_10pct": {
+        "k": 31,
+        "hits": 28,
+        "precision": 0.9032258064516129,
+        "recall": 0.21875
+      },
+      "top_20pct": {
+        "k": 62,
+        "hits": 50,
+        "precision": 0.8064516129032258,
+        "recall": 0.390625
+      }
+    }
+  },
+  "note": "Split 42, 25-model EXT ensemble, calibrated on validation."
+}

@@ -1,0 +1,9 @@
+streamlit>=1.65
+catboost>=1.2
+rdkit
+scikit-learn
+pandas
+numpy
+matplotlib
+padelpy
+openpyxl

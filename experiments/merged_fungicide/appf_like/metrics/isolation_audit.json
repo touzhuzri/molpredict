@@ -1,0 +1,137 @@
+{
+  "splits": {
+    "42": {
+      "train": {
+        "n": 1454,
+        "n_positive": 476,
+        "n_negative": 978,
+        "n_unknown": 0,
+        "label_values": [
+          "0",
+          "1"
+        ]
+      },
+      "val": {
+        "n": 312,
+        "n_positive": 122,
+        "n_negative": 190,
+        "n_unknown": 0,
+        "label_values": [
+          "0",
+          "1"
+        ]
+      },
+      "test": {
+        "n": 312,
+        "n_positive": 128,
+        "n_negative": 184,
+        "n_unknown": 0,
+        "label_values": [
+          "0",
+          "1"
+        ]
+      },
+      "overlaps": {
+        "train_val_structure": 0,
+        "train_val_scaffold": 0,
+        "train_test_structure": 0,
+        "train_test_scaffold": 0,
+        "val_test_structure": 0,
+        "val_test_scaffold": 0
+      },
+      "labels_binary": true,
+      "no_unknown_or_conflict": true
+    },
+    "43": {
+      "train": {
+        "n": 1454,
+        "n_positive": 487,
+        "n_negative": 967,
+        "n_unknown": 0,
+        "label_values": [
+          "0",
+          "1"
+        ]
+      },
+      "val": {
+        "n": 312,
+        "n_positive": 123,
+        "n_negative": 189,
+        "n_unknown": 0,
+        "label_values": [
+          "0",
+          "1"
+        ]
+      },
+      "test": {
+        "n": 312,
+        "n_positive": 116,
+        "n_negative": 196,
+        "n_unknown": 0,
+        "label_values": [
+          "0",
+          "1"
+        ]
+      },
+      "overlaps": {
+        "train_val_structure": 0,
+        "train_val_scaffold": 0,
+        "train_test_structure": 0,
+        "train_test_scaffold": 0,
+        "val_test_structure": 0,
+        "val_test_scaffold": 0
+      },
+      "labels_binary": true,
+      "no_unknown_or_conflict": true
+    },
+    "44": {
+      "train": {
+        "n": 1454,
+        "n_positive": 500,
+        "n_negative": 954,
+        "n_unknown": 0,
+        "label_values": [
+          "0",
+          "1"
+        ]
+      },
+      "val": {
+        "n": 312,
+        "n_positive": 113,
+        "n_negative": 199,
+        "n_unknown": 0,
+        "label_values": [
+          "0",
+          "1"
+        ]
+      },
+      "test": {
+        "n": 312,
+        "n_positive": 113,
+        "n_negative": 199,
+        "n_unknown": 0,
+        "label_values": [
+          "0",
+          "1"
+        ]
+      },
+      "overlaps": {
+        "train_val_structure": 0,
+        "train_val_scaffold": 0,
+        "train_test_structure": 0,
+        "train_test_scaffold": 0,
+        "val_test_structure": 0,
+        "val_test_scaffold": 0
+      },
+      "labels_binary": true,
+      "no_unknown_or_conflict": true
+    }
+  },
+  "models": {
+    "P24/split42": 25,
+    "EXT/split42": 25,
+    "EXT_OLD_ONLY/split42": 25,
+    "EXT_OLD_ONLY/split43": 25,
+    "EXT_OLD_ONLY/split44": 25
+  }
+}

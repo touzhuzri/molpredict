@@ -1,0 +1,81 @@
+{
+  "splits": {
+    "42": {
+      "n": {
+        "train": 1454,
+        "val": 312,
+        "test": 312
+      },
+      "structure_overlap": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "scaffold_overlap": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "aux_scaffold_overlap_val": 0,
+      "aux_scaffold_overlap_test": 0
+    },
+    "43": {
+      "n": {
+        "train": 1454,
+        "val": 312,
+        "test": 312
+      },
+      "structure_overlap": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "scaffold_overlap": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "aux_scaffold_overlap_val": 0,
+      "aux_scaffold_overlap_test": 0
+    },
+    "44": {
+      "n": {
+        "train": 1454,
+        "val": 312,
+        "test": 312
+      },
+      "structure_overlap": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "scaffold_overlap": {
+        "train_val": 0,
+        "train_test": 0,
+        "val_test": 0
+      },
+      "aux_scaffold_overlap_val": 0,
+      "aux_scaffold_overlap_test": 0
+    }
+  },
+  "checks": {
+    "seed42": {
+      "all_supervised_indices_unique": true,
+      "all_labels_binary": true,
+      "no_unknown_or_conflict": true,
+      "structure_id_unique": true
+    },
+    "seed43": {
+      "all_supervised_indices_unique": true,
+      "all_labels_binary": true,
+      "no_unknown_or_conflict": true,
+      "structure_id_unique": true
+    },
+    "seed44": {
+      "all_supervised_indices_unique": true,
+      "all_labels_binary": true,
+      "no_unknown_or_conflict": true,
+      "structure_id_unique": true
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "experiment": "B",
+  "split_seed": 42,
+  "seed": 44,
+  "baseline_auc": 0.8090608016304347,
+  "row_permutation": {
+    "mean": 0.8073093580163044,
+    "std": 0.001200036991296823,
+    "min": 0.8051120923913043,
+    "max": 0.8104194972826089,
+    "drop": 0.0017514436141302658
+  },
+  "column_permutation": {
+    "mean": 0.8075800356657608,
+    "std": 0.0009784499966893152,
+    "min": 0.8056640625000002,
+    "max": 0.8100373641304348,
+    "drop": 0.0014807659646739468
+  },
+  "repeats": 32,
+  "note": "Only test-time PaDEL is permuted; SMILES and labels are fixed."
+}

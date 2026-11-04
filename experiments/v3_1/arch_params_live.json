@@ -1,0 +1,26 @@
+{
+  "ft_smiles": {
+    "total": 44893057,
+    "trainable": 14964865,
+    "smiles_live": true,
+    "confseq_live": false,
+    "unfreeze_smiles": 2,
+    "unfreeze_confseq": 0
+  },
+  "ft_both": {
+    "total": 59731073,
+    "trainable": 19696257,
+    "smiles_live": true,
+    "confseq_live": true,
+    "unfreeze_smiles": 2,
+    "unfreeze_confseq": 2
+  },
+  "ft_no_smiles": {
+    "total": 15487489,
+    "trainable": 5380865,
+    "smiles_live": false,
+    "confseq_live": true,
+    "unfreeze_smiles": 0,
+    "unfreeze_confseq": 2
+  }
+}

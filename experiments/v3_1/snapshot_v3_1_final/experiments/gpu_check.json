@@ -1,0 +1,90 @@
+{
+  "gpu": {
+    "available": true,
+    "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "total_memory_gb": 8.0,
+    "capability": [
+      8,
+      9
+    ],
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "cudnn": 92400,
+    "bf16_supported": true,
+    "device_index": 0
+  },
+  "nvidia_smi": {
+    "utilization_pct": 41,
+    "memory_used_mb": 2556,
+    "memory_total_mb": 8188
+  },
+  "torch": "2.14.1+cu130",
+  "torch_cuda": "13.0",
+  "cuda_available": true,
+  "device_count": 1,
+  "current_device": "0",
+  "module_devices": {
+    "smiles_encoder": {
+      "cuda:0": 103
+    },
+    "confseq_encoder": {
+      "cuda:0": 103
+    },
+    "smiles_projector": {
+      "cuda:0": 5
+    },
+    "confseq_projector": {
+      "cuda:0": 5
+    },
+    "descriptor_encoder": {
+      "cuda:0": 5
+    },
+    "fusion": {
+      "cuda:0": 72
+    },
+    "classifier": {
+      "cuda:0": 6
+    }
+  },
+  "all_params_on_device": true,
+  "batch_devices": {
+    "label": "cuda:0",
+    "smiles_ids": "cuda:0",
+    "confseq_ids": "cuda:0",
+    "descriptors": "cuda:0"
+  },
+  "forward_fp32": {
+    "shape": [
+      4
+    ],
+    "logits": [
+      -0.016233064234256744,
+      -0.08793865889310837,
+      -0.10362417250871658,
+      -0.11661649495363235
+    ],
+    "peak_allocated_mb": 250.6
+  },
+  "bf16_supported": true,
+  "backward": {
+    "loss": 0.6474515199661255,
+    "amp_dtype": "torch.bfloat16",
+    "grad_modules": {
+      "cls_token": 3.989392,
+      "modality_embed": 0.069052,
+      "smiles_projector": 0.269018,
+      "smiles_encoder": 0.146435,
+      "confseq_projector": 0.495321,
+      "confseq_encoder": 0.971092,
+      "descriptor_encoder": 0.16933,
+      "input_norm": 0.184778,
+      "fusion": 1.844975,
+      "classifier": 2.568648
+    },
+    "elapsed_sec": 0.283,
+    "peak_allocated_mb": 343.0,
+    "peak_reserved_mb": 386.0
+  },
+  "trainable_params": 21084161,
+  "total_params": 61118977
+}

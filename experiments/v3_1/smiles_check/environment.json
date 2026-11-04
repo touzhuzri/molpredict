@@ -1,0 +1,24 @@
+{
+  "gpu": {
+    "available": true,
+    "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "total_memory_gb": 8.0,
+    "capability": [
+      8,
+      9
+    ],
+    "torch": "2.14.1+cu130",
+    "torch_cuda": "13.0",
+    "cudnn": 92400,
+    "bf16_supported": true,
+    "device_index": 0
+  },
+  "code_sha256": {
+    "src\\molpredict\\v3_model.py": "4de8ee8b6ac2f5d4e9d4c2662682a8f8ad7d6cc33282e73ba01cbf899017bf65",
+    "src\\molpredict\\v3_data.py": "a08d7f1715205402dcc86ec0043b77ba546885a2defa84a4ae70189aca5396bb",
+    "src\\molpredict\\v3_encoders.py": "6dc48963440bf3e6ae0b3bc4e2f4ec0269ac0c9ca0d58774b128587c12e12db6",
+    "src\\molpredict\\v3_1_train.py": "99db6e2d530be59c390171063d1c9624ee71f8b7576558425274d5a8a8827b4c",
+    "scripts\\run_v3_1_experiments.py": "148271430d60b5de1cf6dccef30d5e17dbd98b0b13fa2ae91171c7858e51956d"
+  },
+  "torch_threads": "4"
+}

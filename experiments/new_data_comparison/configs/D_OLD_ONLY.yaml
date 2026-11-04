@@ -1,0 +1,35 @@
+experiment: D_OLD_ONLY
+arch: D
+model:
+  modalities:
+  - smiles
+  - descriptors
+  d_model: 128
+  n_layers: 4
+  n_heads: 4
+  ff_mult: 2
+  dropout: 0.3
+  max_smiles_len: 320
+  max_confseq_len: 512
+  n_descriptors: 24
+  smiles_dim: 768
+  confseq_dim: 256
+  smiles_live: false
+  confseq_live: false
+  unfreeze_smiles_layers: 0
+  unfreeze_confseq_layers: 0
+  descriptor_value_hidden: 64
+  pooling: cls
+aux_source: old
+aux_weight: 0.2
+training:
+  epochs: 100
+  patience: 18
+  batch_size: 16
+  grad_accum: 2
+  lr: 0.0003
+  amp: bf16
+  device: auto
+  label: old PPDB classification only
+note: 'A/B/C/E NEW_AUX=N/A: no auxiliary objective; new data not usable without changing
+  the model.'

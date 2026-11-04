@@ -1,0 +1,618 @@
+{
+  "model": "experiments\\v3\\runs\\V3_no_padel_seed42",
+  "device": "cpu",
+  "config": {
+    "modalities": [
+      "smiles",
+      "confseq"
+    ],
+    "d_model": 128,
+    "n_layers": 4,
+    "n_heads": 4,
+    "ff_mult": 2,
+    "dropout": 0.3,
+    "max_smiles_len": 320,
+    "max_confseq_len": 512,
+    "n_descriptors": 24,
+    "smiles_dim": 768,
+    "confseq_dim": 256,
+    "smiles_live": false,
+    "confseq_live": false,
+    "unfreeze_smiles_layers": 0,
+    "unfreeze_confseq_layers": 0,
+    "descriptor_value_hidden": 64,
+    "pooling": "cls"
+  },
+  "parameter_breakdown": {
+    "modules": {
+      "classifier": {
+        "total": 8577,
+        "trainable": 8577
+      },
+      "confseq_projector": {
+        "total": 98688,
+        "trainable": 98688
+      },
+      "embeddings": {
+        "total": 768,
+        "trainable": 768
+      },
+      "fusion_layer_0": {
+        "total": 132480,
+        "trainable": 132480
+      },
+      "fusion_layer_1": {
+        "total": 132480,
+        "trainable": 132480
+      },
+      "fusion_layer_2": {
+        "total": 132480,
+        "trainable": 132480
+      },
+      "fusion_layer_3": {
+        "total": 132480,
+        "trainable": 132480
+      },
+      "smiles_projector": {
+        "total": 139648,
+        "trainable": 139648
+      }
+    },
+    "total": 777601,
+    "trainable": 777601,
+    "frozen": 0
+  },
+  "metrics": {
+    "train": {
+      "loss": 0.5939395455447761,
+      "roc_auc": 0.9109706419440933,
+      "pr_auc": 0.7818777316288303,
+      "n": 1332
+    },
+    "val": {
+      "loss": 0.8562254636060624,
+      "roc_auc": 0.8053451178451179,
+      "pr_auc": 0.5117798776006699,
+      "n": 168
+    },
+    "test": {
+      "loss": 0.9721260654852486,
+      "roc_auc": 0.7736625514403291,
+      "pr_auc": 0.5277416861749595,
+      "n": 323
+    },
+    "train_test_auc_gap": 0.13730809050376414
+  },
+  "gradient_probe": {
+    "embeddings": 1.1501385780213336,
+    "smiles_projector": 1.7972159236540297,
+    "confseq_projector": 3.5439362648023,
+    "fusion_layer_0": 1.181953636643812,
+    "fusion_layer_1": 0.5712991305973558,
+    "fusion_layer_2": 0.3481879101930484,
+    "fusion_layer_3": 0.2573350367338213,
+    "classifier": 0.6771981619692748,
+    "total": 4.413812259507218
+  },
+  "attention": {
+    "n_samples": 32,
+    "note": "注意力份额只描述共同注意力计算时的信息参考，不能证明模型定位到真实化学作用位点。",
+    "layers": [
+      {
+        "layer": 0,
+        "heads": {
+          "0": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.2976457476615906,
+                "share": 0.3032663981258174
+              },
+              "confseq": {
+                "mass_per_token": 0.6838205456733704,
+                "share": 0.6967336018741825
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.31462782621383667,
+                "share": 0.3178439824577556
+              },
+              "confseq": {
+                "mass_per_token": 0.6752535104751587,
+                "share": 0.6821560175422444
+              }
+            }
+          },
+          "1": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.4210301339626312,
+                "share": 0.4250213745263781
+              },
+              "confseq": {
+                "mass_per_token": 0.5695791840553284,
+                "share": 0.5749786254736219
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.43910154700279236,
+                "share": 0.4459715658602779
+              },
+              "confseq": {
+                "mass_per_token": 0.5454938411712646,
+                "share": 0.5540284341397221
+              }
+            }
+          },
+          "2": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.3162006437778473,
+                "share": 0.31987949662286824
+              },
+              "confseq": {
+                "mass_per_token": 0.6722986102104187,
+                "share": 0.6801205033771318
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.4748907685279846,
+                "share": 0.4846211672897371
+              },
+              "confseq": {
+                "mass_per_token": 0.5050308704376221,
+                "share": 0.515378832710263
+              }
+            }
+          },
+          "3": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.29041731357574463,
+                "share": 0.29335267345678234
+              },
+              "confseq": {
+                "mass_per_token": 0.6995764374732971,
+                "share": 0.7066473265432176
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.6642506122589111,
+                "share": 0.677075307603995
+              },
+              "confseq": {
+                "mass_per_token": 0.3168080747127533,
+                "share": 0.322924692396005
+              }
+            }
+          }
+        },
+        "mean": {
+          "smiles": {
+            "smiles": {
+              "mass_per_token": 0.08283086493611336,
+              "share": 0.08386728390689115
+            },
+            "confseq": {
+              "mass_per_token": 0.1640796735882759,
+              "share": 0.16613271609310884
+            }
+          },
+          "confseq": {
+            "smiles": {
+              "mass_per_token": 0.1183044221252203,
+              "share": 0.12024465834397724
+            },
+            "confseq": {
+              "mass_per_token": 0.12766164354979992,
+              "share": 0.12975534165602276
+            }
+          }
+        }
+      },
+      {
+        "layer": 1,
+        "heads": {
+          "0": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.3024504482746124,
+                "share": 0.3079994242169227
+              },
+              "confseq": {
+                "mass_per_token": 0.6795333623886108,
+                "share": 0.6920005757830773
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.2507566809654236,
+                "share": 0.25461246907822516
+              },
+              "confseq": {
+                "mass_per_token": 0.7340995669364929,
+                "share": 0.7453875309217748
+              }
+            }
+          },
+          "1": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.34634163975715637,
+                "share": 0.3506179978320227
+              },
+              "confseq": {
+                "mass_per_token": 0.6414617300033569,
+                "share": 0.6493820021679773
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.35302504897117615,
+                "share": 0.36029242755549196
+              },
+              "confseq": {
+                "mass_per_token": 0.6268041729927063,
+                "share": 0.639707572444508
+              }
+            }
+          },
+          "2": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.20074734091758728,
+                "share": 0.203177170289314
+              },
+              "confseq": {
+                "mass_per_token": 0.7872934937477112,
+                "share": 0.796822829710686
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.4364791214466095,
+                "share": 0.44543966602842594
+              },
+              "confseq": {
+                "mass_per_token": 0.5434046983718872,
+                "share": 0.554560333971574
+              }
+            }
+          },
+          "3": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.2882487177848816,
+                "share": 0.29181522900323
+              },
+              "confseq": {
+                "mass_per_token": 0.6995294690132141,
+                "share": 0.70818477099677
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.4085462689399719,
+                "share": 0.41784817124835805
+              },
+              "confseq": {
+                "mass_per_token": 0.5691922903060913,
+                "share": 0.582151828751642
+              }
+            }
+          }
+        },
+        "mean": {
+          "smiles": {
+            "smiles": {
+              "mass_per_token": 0.07111175917088985,
+              "share": 0.0720920999534906
+            },
+            "confseq": {
+              "mass_per_token": 0.17548862844705582,
+              "share": 0.17790790004650942
+            }
+          },
+          "confseq": {
+            "smiles": {
+              "mass_per_token": 0.09055044502019882,
+              "share": 0.09234404693134178
+            },
+            "confseq": {
+              "mass_per_token": 0.1545937955379486,
+              "share": 0.1576559530686582
+            }
+          }
+        }
+      },
+      {
+        "layer": 2,
+        "heads": {
+          "0": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.29991915822029114,
+                "share": 0.30512895387693006
+              },
+              "confseq": {
+                "mass_per_token": 0.683006763458252,
+                "share": 0.6948710461230699
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.29190513491630554,
+                "share": 0.2964373953113085
+              },
+              "confseq": {
+                "mass_per_token": 0.6928057670593262,
+                "share": 0.7035626046886915
+              }
+            }
+          },
+          "1": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.3152031898498535,
+                "share": 0.32021209608678386
+              },
+              "confseq": {
+                "mass_per_token": 0.6691543459892273,
+                "share": 0.6797879039132162
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.33505257964134216,
+                "share": 0.3422932318064775
+              },
+              "confseq": {
+                "mass_per_token": 0.643794059753418,
+                "share": 0.6577067681935225
+              }
+            }
+          },
+          "2": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.26060524582862854,
+                "share": 0.2654888114236509
+              },
+              "confseq": {
+                "mass_per_token": 0.7210001349449158,
+                "share": 0.7345111885763491
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.3444025218486786,
+                "share": 0.35061081548424905
+              },
+              "confseq": {
+                "mass_per_token": 0.6378903985023499,
+                "share": 0.6493891845157509
+              }
+            }
+          },
+          "3": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.35101163387298584,
+                "share": 0.3564065876112326
+              },
+              "confseq": {
+                "mass_per_token": 0.6338512897491455,
+                "share": 0.6435934123887674
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.34964266419410706,
+                "share": 0.35677842797223214
+              },
+              "confseq": {
+                "mass_per_token": 0.6303567886352539,
+                "share": 0.6432215720277679
+              }
+            }
+          }
+        },
+        "mean": {
+          "smiles": {
+            "smiles": {
+              "mass_per_token": 0.07667120173573494,
+              "share": 0.07796241997582844
+            },
+            "confseq": {
+              "mass_per_token": 0.16918828338384628,
+              "share": 0.17203758002417155
+            }
+          },
+          "confseq": {
+            "smiles": {
+              "mass_per_token": 0.08256268128752708,
+              "share": 0.0841220964474638
+            },
+            "confseq": {
+              "mass_per_token": 0.16280293837189674,
+              "share": 0.1658779035525362
+            }
+          }
+        }
+      },
+      {
+        "layer": 3,
+        "heads": {
+          "0": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.34047970175743103,
+                "share": 0.34701674750387573
+              },
+              "confseq": {
+                "mass_per_token": 0.6406824588775635,
+                "share": 0.6529832524961243
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.34953850507736206,
+                "share": 0.3562811943641271
+              },
+              "confseq": {
+                "mass_per_token": 0.6315363049507141,
+                "share": 0.6437188056358729
+              }
+            }
+          },
+          "1": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.342329204082489,
+                "share": 0.3483862964631093
+              },
+              "confseq": {
+                "mass_per_token": 0.6402846574783325,
+                "share": 0.6516137035368907
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.34312593936920166,
+                "share": 0.34988488505523574
+              },
+              "confseq": {
+                "mass_per_token": 0.6375564336776733,
+                "share": 0.6501151149447643
+              }
+            }
+          },
+          "2": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.28485897183418274,
+                "share": 0.2898372340989091
+              },
+              "confseq": {
+                "mass_per_token": 0.6979649662971497,
+                "share": 0.710162765901091
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.3144291639328003,
+                "share": 0.32012647167109937
+              },
+              "confseq": {
+                "mass_per_token": 0.6677737832069397,
+                "share": 0.6798735283289006
+              }
+            }
+          },
+          "3": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.3853740096092224,
+                "share": 0.39410163825027855
+              },
+              "confseq": {
+                "mass_per_token": 0.5924803614616394,
+                "share": 0.6058983617497214
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.3625980019569397,
+                "share": 0.37193312157169733
+              },
+              "confseq": {
+                "mass_per_token": 0.6123030781745911,
+                "share": 0.6280668784283027
+              }
+            }
+          }
+        },
+        "mean": {
+          "smiles": {
+            "smiles": {
+              "mass_per_token": 0.08456511795520782,
+              "share": 0.08619299481065247
+            },
+            "confseq": {
+              "mass_per_token": 0.16071327775716782,
+              "share": 0.16380700518934754
+            }
+          },
+          "confseq": {
+            "smiles": {
+              "mass_per_token": 0.08560572564601898,
+              "share": 0.08737816528945756
+            },
+            "confseq": {
+              "mass_per_token": 0.1593231000006199,
+              "share": 0.16262183471054242
+            }
+          }
+        }
+      }
+    ]
+  },
+  "token_stats": {
+    "smiles": {
+      "n": 1823,
+      "min": 3,
+      "max": 298,
+      "mean": 28.127262753702688,
+      "median": 25.0,
+      "truncated": 0
+    },
+    "confseq": {
+      "n": 1823,
+      "min": 1,
+      "max": 499,
+      "mean": 55.18705430608887,
+      "median": 52.0,
+      "truncated": 0
+    },
+    "descriptor_tokens": 24,
+    "descriptor_tokens_all_valid": true,
+    "tokenizer_roundtrip": [
+      {
+        "original": "C=CC(Cl)Cl",
+        "decoded": "C=CC(Cl)Cl",
+        "match": true
+      },
+      {
+        "original": "O=C(O)c1c(Cl)ccc(Cl)c1Cl",
+        "decoded": "O=C(O)c1c(Cl)ccc(Cl)c1Cl",
+        "match": true
+      },
+      {
+        "original": "O=C(O)COc1ccc(Cl)cc1Cl",
+        "decoded": "O=C(O)COc1ccc(Cl)cc1Cl",
+        "match": true
+      },
+      {
+        "original": "CNC.O=C(O)CCCOc1ccc(Cl)cc1Cl",
+        "decoded": "CNC.O=C(O)CCCOc1ccc(Cl)cc1Cl",
+        "match": true
+      },
+      {
+        "original": "CCC(C)N",
+        "decoded": "CCC(C)N",
+        "match": true
+      }
+    ]
+  },
+  "linear_probes": {},
+  "redundancy": {},
+  "history_epochs": 11,
+  "notes": [
+    "线性探针是诊断，不是主模型，也不改变 V3/V3.1 的结论。",
+    "梯度探针只取一个训练 batch，表示该 checkpoint 的瞬时梯度，不是整个训练过程的平均。",
+    "注意力份额只说明共同注意力计算时的信息参考，不能证明定位到真实化学作用位点。"
+  ]
+}

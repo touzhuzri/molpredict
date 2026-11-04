@@ -1,0 +1,18 @@
+{
+  "experiment": "APPf-like CatBoost",
+  "feature_sets": [
+    "EXT"
+  ],
+  "split_seeds": [
+    42,
+    43,
+    44
+  ],
+  "bags": 25,
+  "iterations": 3000,
+  "learning_rate": 0.03,
+  "depth": 6,
+  "l2_leaf_reg": 3.0,
+  "old_only": true,
+  "test_protocol": "evaluate once per feature set/split; no test-based epoch, feature, threshold or model selection"
+}

@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# 工具/编辑器
+.pytest_cache/
+.ipynb_checkpoints/
+.vscode/
+.idea/
+catboost_info/
+
+# 原始数据与派生数据：许可受限，不提交
+# 见 docs/DATA_PROVENANCE.md
+data/raw/*
+data/processed/*
+data/external/
+data/training/*.csv
+data/training/*.npy
+data/training/*.json
+shujv/
+*.xlsx
+*.xls
+
+# 模型、特征缓存和运行产物
+models/
+experiments/**/models/
+experiments/**/checkpoints/
+experiments/**/runs/
+experiments/**/cache/
+experiments/**/features/
+experiments/**/data/
+experiments/**/data_aux/
+experiments/**/splits/
+experiments/**/predictions/
+experiments/**/demo_cache/
+experiments/**/logs/
+experiments/**/external/
+experiments/**/data_audit/
+experiments/**/*.log
+experiments/**/snapshot_*/**/external_*
+*.pt
+*.pth
+*.npy
+*.npz
+*.cbm
+*.pkl
+
+# 保留目录占位和公开的数据来源说明
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!models/.gitkeep
+!data/training/DATA_SOURCES.md
+
+# 系统
+.DS_Store
+Thumbs.db

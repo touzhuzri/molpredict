@@ -1,0 +1,7 @@
+{
+  "train_auc": 0.9927662782904573,
+  "val_auc": 0.9110440034512511,
+  "test_auc": 0.8526452105978262,
+  "note": "Train predictions use the same 25 balanced models; not used for selection.",
+  "train_minus_test": 0.1401210676926311
+}

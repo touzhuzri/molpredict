@@ -1,0 +1,38 @@
+dataset: data/merged_fungicide_records.csv + data/structures.csv
+split: splits/split_seed42.json (primary); 43/44 sensitivity
+training:
+  optimizer: AdamW
+  lr: 0.0003
+  weight_decay: 0.0001
+  batch_size: 32
+  grad_accum: 1
+  max_epochs: 100
+  patience: 18
+  warmup_ratio: 0.1
+  min_lr_ratio: 0.1
+  amp: bf16
+  grad_clip: 5.0
+  early_stopping: validation ROC-AUC
+  threshold: validation max-F1
+  test: evaluated once after early stopping
+model_common:
+  d_model: 128
+  n_layers: 4
+  n_heads: 4
+  ff_mult: 2
+  dropout: 0.3
+  max_smiles_len: 512
+  n_descriptors: 24
+  pooling: cls
+  smiles_encoder: frozen cached ChemBERTa-zinc-base-v1 states
+  init: random; no old classifier weights
+labels:
+  positive: old PPDB fungicide category OR new D2.1 FUNGICIDE POSITIVE
+  negative: old PPDB herbicide/insecticide only
+  unknown: never used as negative
+  conflict: excluded from supervised loss
+experiment: A
+modalities:
+- smiles
+aux: false
+note: SMILES-only baseline

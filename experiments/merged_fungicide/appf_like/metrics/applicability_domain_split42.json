@@ -1,0 +1,19 @@
+{
+  "split_seed": 42,
+  "threshold": 0.193482905982906,
+  "threshold_rule": "5th percentile of validation max Tanimoto to train",
+  "strict_threshold": 0.3,
+  "strict_rule": "conventional Tanimoto >= 0.30 applicability flag",
+  "validation_max_mean": 0.4071565690742592,
+  "test_max_mean": 0.4172554315848475,
+  "test_in_domain_fraction": 0.9583333333333334,
+  "test_in_domain_n": 299,
+  "test_out_domain_n": 13,
+  "test_strict_in_domain_fraction": 0.7435897435897436,
+  "test_strict_in_domain_n": 232,
+  "test_strict_out_domain_n": 80,
+  "in_domain_auc": 0.8523743016759776,
+  "out_domain_auc": 0.825,
+  "strict_in_domain_auc": 0.8843937575030012,
+  "strict_out_domain_auc": 0.7353865493400377
+}

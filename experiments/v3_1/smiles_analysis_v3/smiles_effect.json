@@ -1,0 +1,117 @@
+{
+  "runs": {
+    "V3_full_seed42": {
+      "test_auc": 0.6854681069958848,
+      "accuracy": 0.7120743034055728,
+      "brier": 0.24126406308265325,
+      "smiles_length": {
+        "mean": 29.693498452012385,
+        "median": 27.0,
+        "min": 3,
+        "max": 168
+      },
+      "confseq_length": {
+        "mean": 55.6656346749226,
+        "median": 52.0
+      },
+      "by_smiles_length_quartile": [
+        {
+          "quartile": 1,
+          "n": 71,
+          "length_min": 3,
+          "length_max": 18,
+          "auc": 0.5244565217391304,
+          "error_rate": 0.4225352112676056
+        },
+        {
+          "quartile": 2,
+          "n": 86,
+          "length_min": 19,
+          "length_max": 26,
+          "auc": 0.7410714285714286,
+          "error_rate": 0.2441860465116279
+        },
+        {
+          "quartile": 3,
+          "n": 79,
+          "length_min": 27,
+          "length_max": 35,
+          "auc": 0.6574746008708272,
+          "error_rate": 0.35443037974683544
+        },
+        {
+          "quartile": 4,
+          "n": 87,
+          "length_min": 36,
+          "length_max": 168,
+          "auc": 0.8101851851851852,
+          "error_rate": 0.16091954022988506
+        }
+      ],
+      "spearman_smiles_len_vs_abs_error": -0.2597711400787504,
+      "spearman_smiles_len_vs_error": -0.15220913141682668
+    },
+    "V3_no_smiles_seed42": {
+      "test_auc": 0.7875514403292181,
+      "accuracy": 0.7120743034055728,
+      "brier": 0.23524657420921366,
+      "smiles_length": {
+        "mean": 29.693498452012385,
+        "median": 27.0,
+        "min": 3,
+        "max": 168
+      },
+      "confseq_length": {
+        "mean": 55.6656346749226,
+        "median": 52.0
+      },
+      "by_smiles_length_quartile": [
+        {
+          "quartile": 1,
+          "n": 71,
+          "length_min": 3,
+          "length_max": 18,
+          "auc": 0.7744565217391305,
+          "error_rate": 0.2535211267605634
+        },
+        {
+          "quartile": 2,
+          "n": 86,
+          "length_min": 19,
+          "length_max": 26,
+          "auc": 0.7410714285714286,
+          "error_rate": 0.37209302325581395
+        },
+        {
+          "quartile": 3,
+          "n": 79,
+          "length_min": 27,
+          "length_max": 35,
+          "auc": 0.7728592162554426,
+          "error_rate": 0.3291139240506329
+        },
+        {
+          "quartile": 4,
+          "n": 87,
+          "length_min": 36,
+          "length_max": 168,
+          "auc": 0.887962962962963,
+          "error_rate": 0.19540229885057472
+        }
+      ],
+      "spearman_smiles_len_vs_abs_error": -0.15931585059215772,
+      "spearman_smiles_len_vs_error": -0.055212037305934956
+    }
+  },
+  "paired": {
+    "V3_full_seed42__vs__V3_no_smiles_seed42": {
+      "same_test_indices": true,
+      "mean_brier_delta": 0.006017488873439626,
+      "mean_brier_delta_long_smiles": 0.021439844970385542,
+      "mean_brier_delta_short_smiles": -0.010288951330974513,
+      "n_long": 166,
+      "n_short": 157
+    }
+  },
+  "note": "测试集只用于最终诊断，不参与任何模型选择。"
+}

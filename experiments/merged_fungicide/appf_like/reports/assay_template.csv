@@ -1,0 +1,2 @@
+compound_id,compound_name,smiles,pathogen_species,strain,concentration,unit,replicate,inhibition_percent,mic,ec50,assay_date,operator,notes
+C001,example,CC(=O)O,Botrytis cinerea,strain-1,10,ug/mL,1,45,,,2026-11-04,tech,example

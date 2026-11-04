@@ -1,0 +1,18 @@
+{
+  "docs/DATA_SOURCES.md": "1bae417515e338c559e5854390ce57484b319d77692cce3f66941e6c54d3b2c5",
+  "docs/README.md": "534f697a9ad4436fb36389e619f522dc5d1237ae950bf0bbb01b8f8b4905c6ac",
+  "docs/v3_architecture.md": "f953ebdfd3a3f3b891d39ac29e1e999175228ea76e772f0980593badb7a7706e",
+  "docs/v3_report.md": "1fd0df1aad5fa93cba05bdf511b0134583da276e0a6a57325a80b9e88cde4eec",
+  "experiments/leakage_audit.json": "d90973a4b913310c443fc552aebe25a3539ee5348c77b64cbc71d6518914f046",
+  "experiments/README.md": "c16aa33def422c5b6a3f922f313c92b3c2a74fb7069bfda34bfc440a0ac8a16c",
+  "experiments/stability.json": "beb56bdd79a1f694bb4a70cb47348a8b00a28b16ae0b9892e01398058f00ecea",
+  "experiments/summary.csv": "4595910d7fb5c51236bfda6df7fedfd70a51c6ffd609bee6f6c7387ab6d715a1",
+  "scripts/aggregate_v3_runs.py": "df4817d6258c5d407639f097579a1cbc7a44163314bfdc0bc0f5ffce0c00aec3",
+  "scripts/run_v3_experiments.py": "1cb8f6b0e20f966bf30a25a0c18901335a36f92fbd20ee67191611a6a684d606",
+  "src/v3_data.py": "a08d7f1715205402dcc86ec0043b77ba546885a2defa84a4ae70189aca5396bb",
+  "src/v3_encoders.py": "6dc48963440bf3e6ae0b3bc4e2f4ec0269ac0c9ca0d58774b128587c12e12db6",
+  "src/v3_model.py": "4de8ee8b6ac2f5d4e9d4c2662682a8f8ad7d6cc33282e73ba01cbf899017bf65",
+  "src/v3_predict.py": "10fd8b07dd0d0a265c963f1d33907819dc9d8885681dcbcd1f8efd12e5789fca",
+  "src/v3_train.py": "06163fd6607bd1424135b4e91048e070fec88da7cf60e0afa74b68789050d65c",
+  "tests/test_v3.py": "0575775ea17004c29fdb541cea3a19601e0fcf83c107b0ed22637dd4a0696f8f"
+}

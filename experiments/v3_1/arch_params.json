@@ -1,0 +1,34 @@
+{
+  "base": {
+    "d_model": 128,
+    "n_layers": 4,
+    "n_heads": 4,
+    "ffn": 256,
+    "params_total": 789121,
+    "params_trainable": 789121
+  },
+  "L": {
+    "d_model": 192,
+    "n_layers": 6,
+    "n_heads": 4,
+    "ffn": 384,
+    "params_total": 2177025,
+    "params_trainable": 2177025
+  },
+  "M": {
+    "d_model": 256,
+    "n_layers": 6,
+    "n_heads": 8,
+    "ffn": 512,
+    "params_total": 3697281,
+    "params_trainable": 3697281
+  },
+  "D": {
+    "d_model": 128,
+    "n_layers": 8,
+    "n_heads": 4,
+    "ffn": 256,
+    "params_total": 1319041,
+    "params_trainable": 1319041
+  }
+}

@@ -1,0 +1,1078 @@
+{
+  "model": "experiments\\v3\\runs\\V3_full_seed42",
+  "device": "cpu",
+  "config": {
+    "modalities": [
+      "smiles",
+      "confseq",
+      "descriptors"
+    ],
+    "d_model": 128,
+    "n_layers": 4,
+    "n_heads": 4,
+    "ff_mult": 2,
+    "dropout": 0.3,
+    "max_smiles_len": 320,
+    "max_confseq_len": 512,
+    "n_descriptors": 24,
+    "smiles_dim": 768,
+    "confseq_dim": 256,
+    "smiles_live": false,
+    "confseq_live": false,
+    "unfreeze_smiles_layers": 0,
+    "unfreeze_confseq_layers": 0,
+    "descriptor_value_hidden": 64,
+    "pooling": "cls"
+  },
+  "parameter_breakdown": {
+    "modules": {
+      "classifier": {
+        "total": 8577,
+        "trainable": 8577
+      },
+      "confseq_projector": {
+        "total": 98688,
+        "trainable": 98688
+      },
+      "descriptor_encoder": {
+        "total": 11520,
+        "trainable": 11520
+      },
+      "embeddings": {
+        "total": 768,
+        "trainable": 768
+      },
+      "fusion_layer_0": {
+        "total": 132480,
+        "trainable": 132480
+      },
+      "fusion_layer_1": {
+        "total": 132480,
+        "trainable": 132480
+      },
+      "fusion_layer_2": {
+        "total": 132480,
+        "trainable": 132480
+      },
+      "fusion_layer_3": {
+        "total": 132480,
+        "trainable": 132480
+      },
+      "smiles_projector": {
+        "total": 139648,
+        "trainable": 139648
+      }
+    },
+    "total": 789121,
+    "trainable": 789121,
+    "frozen": 0
+  },
+  "metrics": {
+    "train": {
+      "loss": 0.13978439235539586,
+      "roc_auc": 0.9963384370464017,
+      "pr_auc": 0.9847428879073025,
+      "n": 1332
+    },
+    "val": {
+      "loss": 1.629003151896454,
+      "roc_auc": 0.8198653198653199,
+      "pr_auc": 0.6116695813403809,
+      "n": 168
+    },
+    "test": {
+      "loss": 2.8227274976555408,
+      "roc_auc": 0.6854423868312757,
+      "pr_auc": 0.43384013895669615,
+      "n": 323
+    },
+    "train_test_auc_gap": 0.310896050215126
+  },
+  "gradient_probe": {
+    "embeddings": 0.3214497990282946,
+    "smiles_projector": 0.49702002207925716,
+    "confseq_projector": 0.3990329080390567,
+    "descriptor_encoder": 0.02583799395483919,
+    "fusion_layer_0": 0.428918912656838,
+    "fusion_layer_1": 0.11516467626943791,
+    "fusion_layer_2": 0.06719549384115368,
+    "fusion_layer_3": 0.052646268883163615,
+    "classifier": 0.23623127269800265,
+    "total": 0.8778269497959575
+  },
+  "attention": {
+    "n_samples": 64,
+    "note": "注意力份额只描述共同注意力计算时的信息参考，不能证明模型定位到真实化学作用位点。",
+    "layers": [
+      {
+        "layer": 0,
+        "heads": {
+          "0": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.3730197548866272,
+                "share": 0.3741667366870406
+              },
+              "confseq": {
+                "mass_per_token": 0.6110230684280396,
+                "share": 0.6129018759977156
+              },
+              "descriptors": {
+                "mass_per_token": 0.012891747057437897,
+                "share": 0.012931387315243835
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.7054499387741089,
+                "share": 0.7058813749477746
+              },
+              "confseq": {
+                "mass_per_token": 0.2926003932952881,
+                "share": 0.29277934064102856
+              },
+              "descriptors": {
+                "mass_per_token": 0.0013384658377617598,
+                "share": 0.001339284411196793
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.987534761428833,
+                "share": 0.9875576803137235
+              },
+              "confseq": {
+                "mass_per_token": 0.012289057485759258,
+                "share": 0.012289342692422283
+              },
+              "descriptors": {
+                "mass_per_token": 0.00015297344361897558,
+                "share": 0.00015297699385425086
+              }
+            }
+          },
+          "1": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.6867040395736694,
+                "share": 0.6890726504285618
+              },
+              "confseq": {
+                "mass_per_token": 0.30539655685424805,
+                "share": 0.3064499445699528
+              },
+              "descriptors": {
+                "mass_per_token": 0.00446201441809535,
+                "share": 0.004477405001485464
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.9399400949478149,
+                "share": 0.941564020312661
+              },
+              "confseq": {
+                "mass_per_token": 0.05809053033590317,
+                "share": 0.05819089278046414
+              },
+              "descriptors": {
+                "mass_per_token": 0.00024466420290991664,
+                "share": 0.0002450869068748936
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.9894176125526428,
+                "share": 0.9897520955694772
+              },
+              "confseq": {
+                "mass_per_token": 0.009978905320167542,
+                "share": 0.009982278793930134
+              },
+              "descriptors": {
+                "mass_per_token": 0.00026553586940281093,
+                "share": 0.00026562563659266966
+              }
+            }
+          },
+          "2": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.3866218328475952,
+                "share": 0.3881501471453334
+              },
+              "confseq": {
+                "mass_per_token": 0.4989199638366699,
+                "share": 0.5008921921211993
+              },
+              "descriptors": {
+                "mass_per_token": 0.11052077263593674,
+                "share": 0.11095766073346733
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.29921016097068787,
+                "share": 0.29940955154362087
+              },
+              "confseq": {
+                "mass_per_token": 0.6885496377944946,
+                "share": 0.6890084801891755
+              },
+              "descriptors": {
+                "mass_per_token": 0.011574255302548409,
+                "share": 0.011581968267203622
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.5832679271697998,
+                "share": 0.5850753357709848
+              },
+              "confseq": {
+                "mass_per_token": 0.2859688401222229,
+                "share": 0.2868549895524098
+              },
+              "descriptors": {
+                "mass_per_token": 0.12767404317855835,
+                "share": 0.1280696746766054
+              }
+            }
+          },
+          "3": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.5091304779052734,
+                "share": 0.5101358163304792
+              },
+              "confseq": {
+                "mass_per_token": 0.4590672552585602,
+                "share": 0.4599737379216371
+              },
+              "descriptors": {
+                "mass_per_token": 0.02983153983950615,
+                "share": 0.02989044574788371
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.18160472810268402,
+                "share": 0.18199957745516288
+              },
+              "confseq": {
+                "mass_per_token": 0.8151466250419617,
+                "share": 0.8169189363712744
+              },
+              "descriptors": {
+                "mass_per_token": 0.0010791398817673326,
+                "share": 0.0010814861735627148
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.777167797088623,
+                "share": 0.7803803941688844
+              },
+              "confseq": {
+                "mass_per_token": 0.2132791131734848,
+                "share": 0.21416075013635
+              },
+              "descriptors": {
+                "mass_per_token": 0.0054363831877708435,
+                "share": 0.005458855694765652
+              }
+            }
+          }
+        },
+        "mean": {
+          "smiles": {
+            "smiles": {
+              "mass_per_token": 0.12221725657582283,
+              "share": 0.1225976456994789
+            },
+            "confseq": {
+              "mass_per_token": 0.11715042777359486,
+              "share": 0.11751504689371955
+            },
+            "descriptors": {
+              "mass_per_token": 0.009856629621936008,
+              "share": 0.009887307406801557
+            }
+          },
+          "confseq": {
+            "smiles": {
+              "mass_per_token": 0.13288780767470598,
+              "share": 0.13305983293247314
+            },
+            "confseq": {
+              "mass_per_token": 0.11589919915422797,
+              "share": 0.11604923240376672
+            },
+            "descriptors": {
+              "mass_per_token": 0.0008897828265617136,
+              "share": 0.0008909346637601326
+            }
+          },
+          "descriptors": {
+            "smiles": {
+              "mass_per_token": 0.20858675613999367,
+              "share": 0.20898210064006467
+            },
+            "confseq": {
+              "mass_per_token": 0.032594744756352156,
+              "share": 0.032656523142042156
+            },
+            "descriptors": {
+              "mass_per_token": 0.008345558479959436,
+              "share": 0.008361376217893183
+            }
+          }
+        }
+      },
+      {
+        "layer": 1,
+        "heads": {
+          "0": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.2220793217420578,
+                "share": 0.2232305970689259
+              },
+              "confseq": {
+                "mass_per_token": 0.5792293548583984,
+                "share": 0.5822321218860317
+              },
+              "descriptors": {
+                "mass_per_token": 0.1935339868068695,
+                "share": 0.19453728104504245
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.4853200912475586,
+                "share": 0.4858937720087835
+              },
+              "confseq": {
+                "mass_per_token": 0.49273884296417236,
+                "share": 0.493321293185407
+              },
+              "descriptors": {
+                "mass_per_token": 0.020760394632816315,
+                "share": 0.0207849348058095
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.38313737511634827,
+                "share": 0.3856344680856489
+              },
+              "confseq": {
+                "mass_per_token": 0.36238884925842285,
+                "share": 0.3647507139743393
+              },
+              "descriptors": {
+                "mass_per_token": 0.24799849092960358,
+                "share": 0.24961481794001183
+              }
+            }
+          },
+          "1": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.29840582609176636,
+                "share": 0.3018846364607453
+              },
+              "confseq": {
+                "mass_per_token": 0.620480477809906,
+                "share": 0.6277140293401309
+              },
+              "descriptors": {
+                "mass_per_token": 0.06959005445241928,
+                "share": 0.07040133419912381
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.6367512941360474,
+                "share": 0.6438670436774214
+              },
+              "confseq": {
+                "mass_per_token": 0.32105833292007446,
+                "share": 0.32464618693194586
+              },
+              "descriptors": {
+                "mass_per_token": 0.031138790771365166,
+                "share": 0.03148676939063271
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.8828246593475342,
+                "share": 0.8849395602612004
+              },
+              "confseq": {
+                "mass_per_token": 0.0975545346736908,
+                "share": 0.09778823699762243
+              },
+              "descriptors": {
+                "mass_per_token": 0.01723092421889305,
+                "share": 0.017272202741177176
+              }
+            }
+          },
+          "2": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.17550113797187805,
+                "share": 0.17744853040083658
+              },
+              "confseq": {
+                "mass_per_token": 0.5235678553581238,
+                "share": 0.5293774591553017
+              },
+              "descriptors": {
+                "mass_per_token": 0.28995659947395325,
+                "share": 0.2931740104438617
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.24436725676059723,
+                "share": 0.24532819112610219
+              },
+              "confseq": {
+                "mass_per_token": 0.6809605360031128,
+                "share": 0.6836383022033494
+              },
+              "descriptors": {
+                "mass_per_token": 0.07075527310371399,
+                "share": 0.07103350667054842
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.15220773220062256,
+                "share": 0.15348952753750666
+              },
+              "confseq": {
+                "mass_per_token": 0.4142080247402191,
+                "share": 0.41769621753394776
+              },
+              "descriptors": {
+                "mass_per_token": 0.42523321509361267,
+                "share": 0.4288142549285456
+              }
+            }
+          },
+          "3": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.23761379718780518,
+                "share": 0.23990255853062695
+              },
+              "confseq": {
+                "mass_per_token": 0.6078470349311829,
+                "share": 0.6137019844853105
+              },
+              "descriptors": {
+                "mass_per_token": 0.14499878883361816,
+                "share": 0.14639545698406256
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.2877851128578186,
+                "share": 0.290435261548491
+              },
+              "confseq": {
+                "mass_per_token": 0.6182068586349487,
+                "share": 0.6238997872256834
+              },
+              "descriptors": {
+                "mass_per_token": 0.08488328009843826,
+                "share": 0.08566495122582557
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.22553615272045135,
+                "share": 0.2304788626375079
+              },
+              "confseq": {
+                "mass_per_token": 0.5249068140983582,
+                "share": 0.5364103450590476
+              },
+              "descriptors": {
+                "mass_per_token": 0.2281116396188736,
+                "share": 0.23311079230344448
+              }
+            }
+          }
+        },
+        "mean": {
+          "smiles": {
+            "smiles": {
+              "mass_per_token": 0.05835000518709421,
+              "share": 0.0588976913511018
+            },
+            "confseq": {
+              "mass_per_token": 0.1456952951848507,
+              "share": 0.14706282372367238
+            },
+            "descriptors": {
+              "mass_per_token": 0.04362996434792876,
+              "share": 0.044039484925225816
+            }
+          },
+          "confseq": {
+            "smiles": {
+              "mass_per_token": 0.10338898468762636,
+              "share": 0.10404640019914348
+            },
+            "confseq": {
+              "mass_per_token": 0.13206028565764427,
+              "share": 0.13290001225433176
+            },
+            "descriptors": {
+              "mass_per_token": 0.012971108662895858,
+              "share": 0.013053587546524767
+            }
+          },
+          "descriptors": {
+            "smiles": {
+              "mass_per_token": 0.10273161996155977,
+              "share": 0.103734252695933
+            },
+            "confseq": {
+              "mass_per_token": 0.08744113892316818,
+              "share": 0.08829454071171246
+            },
+            "descriptors": {
+              "mass_per_token": 0.05741089186631143,
+              "share": 0.05797120659235454
+            }
+          }
+        }
+      },
+      {
+        "layer": 2,
+        "heads": {
+          "0": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.28435227274894714,
+                "share": 0.2864661349268883
+              },
+              "confseq": {
+                "mass_per_token": 0.5214991569519043,
+                "share": 0.525375958543999
+              },
+              "descriptors": {
+                "mass_per_token": 0.18676947057247162,
+                "share": 0.1881579065291127
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.29170650243759155,
+                "share": 0.293452735376327
+              },
+              "confseq": {
+                "mass_per_token": 0.5398231148719788,
+                "share": 0.5430546400399235
+              },
+              "descriptors": {
+                "mass_per_token": 0.16251973807811737,
+                "share": 0.16349262458374947
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.39773479104042053,
+                "share": 0.39993973228244367
+              },
+              "confseq": {
+                "mass_per_token": 0.48044729232788086,
+                "share": 0.4831107707897498
+              },
+              "descriptors": {
+                "mass_per_token": 0.11630473285913467,
+                "share": 0.11694949692780657
+              }
+            }
+          },
+          "1": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.3161325454711914,
+                "share": 0.32157678501141135
+              },
+              "confseq": {
+                "mass_per_token": 0.5561248660087585,
+                "share": 0.5657021051389838
+              },
+              "descriptors": {
+                "mass_per_token": 0.11081276088953018,
+                "share": 0.11272110984960489
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.3232586979866028,
+                "share": 0.33052771452432034
+              },
+              "confseq": {
+                "mass_per_token": 0.5549688935279846,
+                "share": 0.5674483042603168
+              },
+              "descriptors": {
+                "mass_per_token": 0.09978025406599045,
+                "share": 0.10202398121536294
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.4644397795200348,
+                "share": 0.46961640306288843
+              },
+              "confseq": {
+                "mass_per_token": 0.4589393138885498,
+                "share": 0.4640546295048644
+              },
+              "descriptors": {
+                "mass_per_token": 0.06559781730175018,
+                "share": 0.06632896743224714
+              }
+            }
+          },
+          "2": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.2182978093624115,
+                "share": 0.22125468045723545
+              },
+              "confseq": {
+                "mass_per_token": 0.5647047758102417,
+                "share": 0.5723537725343923
+              },
+              "descriptors": {
+                "mass_per_token": 0.20363330841064453,
+                "share": 0.20639154700837223
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.24464046955108643,
+                "share": 0.24744403842178045
+              },
+              "confseq": {
+                "mass_per_token": 0.6396555304527283,
+                "share": 0.6469859543046579
+              },
+              "descriptors": {
+                "mass_per_token": 0.10437388718128204,
+                "share": 0.10557000727356165
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.21838104724884033,
+                "share": 0.22137683687415383
+              },
+              "confseq": {
+                "mass_per_token": 0.6054441928863525,
+                "share": 0.6137497828384351
+              },
+              "descriptors": {
+                "mass_per_token": 0.1626422256231308,
+                "share": 0.1648733802874111
+              }
+            }
+          },
+          "3": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.2155570387840271,
+                "share": 0.21769380566869675
+              },
+              "confseq": {
+                "mass_per_token": 0.6173217296600342,
+                "share": 0.6234410966571201
+              },
+              "descriptors": {
+                "mass_per_token": 0.1573057621717453,
+                "share": 0.15886509767418314
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.22428923845291138,
+                "share": 0.22649283913216103
+              },
+              "confseq": {
+                "mass_per_token": 0.6557086110115051,
+                "share": 0.6621508279924958
+              },
+              "descriptors": {
+                "mass_per_token": 0.11027292162179947,
+                "share": 0.11135633287534322
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.20014400780200958,
+                "share": 0.20293852709120416
+              },
+              "confseq": {
+                "mass_per_token": 0.6622214317321777,
+                "share": 0.6714677268624536
+              },
+              "descriptors": {
+                "mass_per_token": 0.12386428564786911,
+                "share": 0.12559374604634227
+              }
+            }
+          }
+        },
+        "mean": {
+          "smiles": {
+            "smiles": {
+              "mass_per_token": 0.06464622914791107,
+              "share": 0.06542293850334299
+            },
+            "confseq": {
+              "mass_per_token": 0.14122815802693367,
+              "share": 0.14292498138439444
+            },
+            "descriptors": {
+              "mass_per_token": 0.04115758137777448,
+              "share": 0.041652080112262554
+            }
+          },
+          "confseq": {
+            "smiles": {
+              "mass_per_token": 0.06774343177676201,
+              "share": 0.06858361780008672
+            },
+            "confseq": {
+              "mass_per_token": 0.1493847593665123,
+              "share": 0.15123749967838593
+            },
+            "descriptors": {
+              "mass_per_token": 0.029809175059199333,
+              "share": 0.030178882521527364
+            }
+          },
+          "descriptors": {
+            "smiles": {
+              "mass_per_token": 0.08004372660070658,
+              "share": 0.08093070859578408
+            },
+            "confseq": {
+              "mass_per_token": 0.13794076442718506,
+              "share": 0.13946931612798832
+            },
+            "descriptors": {
+              "mass_per_token": 0.029275566339492798,
+              "share": 0.029599975276227607
+            }
+          }
+        }
+      },
+      {
+        "layer": 3,
+        "heads": {
+          "0": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.2827600836753845,
+                "share": 0.2854975198826746
+              },
+              "confseq": {
+                "mass_per_token": 0.47426629066467285,
+                "share": 0.478857722733469
+              },
+              "descriptors": {
+                "mass_per_token": 0.23338532447814941,
+                "share": 0.23564475738385643
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.2953757345676422,
+                "share": 0.29799480735178924
+              },
+              "confseq": {
+                "mass_per_token": 0.4853944182395935,
+                "share": 0.48969837134613103
+              },
+              "descriptors": {
+                "mass_per_token": 0.21044085919857025,
+                "share": 0.21230682130207973
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.29684022068977356,
+                "share": 0.2995317944165735
+              },
+              "confseq": {
+                "mass_per_token": 0.4600537419319153,
+                "share": 0.4642252405307998
+              },
+              "descriptors": {
+                "mass_per_token": 0.23412010073661804,
+                "share": 0.23624296505262665
+              }
+            }
+          },
+          "1": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.25361573696136475,
+                "share": 0.2565456170165083
+              },
+              "confseq": {
+                "mass_per_token": 0.4942614734172821,
+                "share": 0.4999713984019914
+              },
+              "descriptors": {
+                "mass_per_token": 0.240702286362648,
+                "share": 0.24348298458150028
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.2580375075340271,
+                "share": 0.261149811441362
+              },
+              "confseq": {
+                "mass_per_token": 0.48647892475128174,
+                "share": 0.4923465610992256
+              },
+              "descriptors": {
+                "mass_per_token": 0.2435658723115921,
+                "share": 0.24650362745941237
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.2470046430826187,
+                "share": 0.24969114351312505
+              },
+              "confseq": {
+                "mass_per_token": 0.4964616298675537,
+                "share": 0.5018613031924107
+              },
+              "descriptors": {
+                "mass_per_token": 0.24577443301677704,
+                "share": 0.24844755329446416
+              }
+            }
+          },
+          "2": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.2845645546913147,
+                "share": 0.28722438050899446
+              },
+              "confseq": {
+                "mass_per_token": 0.44824373722076416,
+                "share": 0.4524334728895875
+              },
+              "descriptors": {
+                "mass_per_token": 0.25793126225471497,
+                "share": 0.260342146601418
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.3380020260810852,
+                "share": 0.3406564297723469
+              },
+              "confseq": {
+                "mass_per_token": 0.45082974433898926,
+                "share": 0.4543702087302201
+              },
+              "descriptors": {
+                "mass_per_token": 0.20337620377540588,
+                "share": 0.204973361497433
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.30230221152305603,
+                "share": 0.3053057916856732
+              },
+              "confseq": {
+                "mass_per_token": 0.47575071454048157,
+                "share": 0.4804776247451585
+              },
+              "descriptors": {
+                "mass_per_token": 0.21210913360118866,
+                "share": 0.2142165835691683
+              }
+            }
+          },
+          "3": {
+            "smiles": {
+              "smiles": {
+                "mass_per_token": 0.2961511015892029,
+                "share": 0.2990490522647939
+              },
+              "confseq": {
+                "mass_per_token": 0.49598973989486694,
+                "share": 0.5008431873212025
+              },
+              "descriptors": {
+                "mass_per_token": 0.19816860556602478,
+                "share": 0.20010776041400366
+              }
+            },
+            "confseq": {
+              "smiles": {
+                "mass_per_token": 0.3235132396221161,
+                "share": 0.32647717323592285
+              },
+              "confseq": {
+                "mass_per_token": 0.4802038073539734,
+                "share": 0.4846032940882935
+              },
+              "descriptors": {
+                "mass_per_token": 0.18720442056655884,
+                "share": 0.18891953267578365
+              }
+            },
+            "descriptors": {
+              "smiles": {
+                "mass_per_token": 0.2887215316295624,
+                "share": 0.29192490819121225
+              },
+              "confseq": {
+                "mass_per_token": 0.4816170930862427,
+                "share": 0.4869606533637694
+              },
+              "descriptors": {
+                "mass_per_token": 0.21868808567523956,
+                "share": 0.2211144384450183
+              }
+            }
+          }
+        },
+        "mean": {
+          "smiles": {
+            "smiles": {
+              "mass_per_token": 0.06981821730732918,
+              "share": 0.07052273597037083
+            },
+            "confseq": {
+              "mass_per_token": 0.11954757757484913,
+              "share": 0.12075390312670563
+            },
+            "descriptors": {
+              "mass_per_token": 0.05813671741634607,
+              "share": 0.05872336090292354
+            }
+          },
+          "confseq": {
+            "smiles": {
+              "mass_per_token": 0.07593303173780441,
+              "share": 0.07665313508304142
+            },
+            "confseq": {
+              "mass_per_token": 0.11893168091773987,
+              "share": 0.12005955767076151
+            },
+            "descriptors": {
+              "mass_per_token": 0.05278670974075794,
+              "share": 0.05328730724619706
+            }
+          },
+          "descriptors": {
+            "smiles": {
+              "mass_per_token": 0.07092928793281317,
+              "share": 0.07165581448740792
+            },
+            "confseq": {
+              "mass_per_token": 0.11961769871413708,
+              "share": 0.12084293919022439
+            },
+            "descriptors": {
+              "mass_per_token": 0.056918234564363956,
+              "share": 0.057501246322367694
+            }
+          }
+        }
+      }
+    ]
+  },
+  "token_stats": {
+    "smiles": {
+      "n": 1823,
+      "min": 3,
+      "max": 298,
+      "mean": 28.127262753702688,
+      "median": 25.0,
+      "truncated": 0
+    },
+    "confseq": {
+      "n": 1823,
+      "min": 1,
+      "max": 499,
+      "mean": 55.18705430608887,
+      "median": 52.0,
+      "truncated": 0
+    },
+    "descriptor_tokens": 24,
+    "descriptor_tokens_all_valid": true,
+    "tokenizer_roundtrip": [
+      {
+        "original": "C=CC(Cl)Cl",
+        "decoded": "C=CC(Cl)Cl",
+        "match": true
+      },
+      {
+        "original": "O=C(O)c1c(Cl)ccc(Cl)c1Cl",
+        "decoded": "O=C(O)c1c(Cl)ccc(Cl)c1Cl",
+        "match": true
+      },
+      {
+        "original": "O=C(O)COc1ccc(Cl)cc1Cl",
+        "decoded": "O=C(O)COc1ccc(Cl)cc1Cl",
+        "match": true
+      },
+      {
+        "original": "CNC.O=C(O)CCCOc1ccc(Cl)cc1Cl",
+        "decoded": "CNC.O=C(O)CCCOc1ccc(Cl)cc1Cl",
+        "match": true
+      },
+      {
+        "original": "CCC(C)N",
+        "decoded": "CCC(C)N",
+        "match": true
+      }
+    ]
+  },
+  "linear_probes": {
+    "smiles_mean_linear": {
+      "train": 0.9989667712381577,
+      "val": 0.787037037037037,
+      "test": 0.663014403292181
+    },
+    "confseq_mean_linear": {
+      "train": 0.8996238547860966,
+      "val": 0.7807239057239057,
+      "test": 0.7688786008230453
+    }
+  },
+  "redundancy": {
+    "linear_cka_smiles_confseq": 0.47452986240386963,
+    "ridge_r2_smiles_to_confseq_val": 0.4158204963725911
+  },
+  "history_epochs": 20,
+  "notes": [
+    "线性探针是诊断，不是主模型，也不改变 V3/V3.1 的结论。",
+    "梯度探针只取一个训练 batch，表示该 checkpoint 的瞬时梯度，不是整个训练过程的平均。",
+    "注意力份额只说明共同注意力计算时的信息参考，不能证明定位到真实化学作用位点。"
+  ]
+}
